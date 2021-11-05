@@ -1,17 +1,14 @@
-import logo from './logo.svg';
-import { Container } from 'react-bootstrap';
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-//import './App.css';
-import MealInfo from './View/JS/MenuInfo/MealInfo';
 import Menu from './View/JS/Menu';
+import MenuList from './View/JS/MenuList/MenuList';
 
 
 function App() {
   return (
-    <Container>
+    <div className="App">
       <Menu/>
-      <MealInfo/>
-    </Container>
+    </div>
   );
 }
 

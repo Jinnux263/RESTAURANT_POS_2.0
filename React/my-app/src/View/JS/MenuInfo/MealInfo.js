@@ -1,8 +1,8 @@
-import {Col, Row, Container, Card, Button} from 'react-bootstrap';
+//import {Col, Row, Container, Card, Button} from 'react-bootstrap';
 
 function MealInfo() {
     return (
-        <div>
+        <div style = {{backgroundColor: "black"}}>
             MealInfo
         </div>
     )
