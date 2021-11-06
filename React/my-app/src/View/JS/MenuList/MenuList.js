@@ -3,7 +3,7 @@ import '../../CSS/Box.css'
 
 function MenuList(Mlist) {
     return (
-        <div className="grid">{Mlist.Mlist.map(Meal)}</div>
+        <div className="grid MenuListContainer">{Mlist.Mlist.map(Meal)}</div>
     )
 }
 

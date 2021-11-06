@@ -14,7 +14,8 @@
 }
 
 .Menucontainer{
-  max-height: 100vh;
+  height: 100vh;
+  overflow:visible;
 }
 
 .MealInfoContainer{
@@ -34,4 +35,18 @@
 .GoBackBtn{
   margin-left: 40px;
   margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.CataBlock {
+  border:1px solid red;
+  margin: 5px;
+  border-radius: 20px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.MenuListContainer {
+  overflow: scroll;
+  overflow-x: hidden;
+  max-height: 80vh;
 }

@@ -13,15 +13,15 @@ function Menu() {
     return (
         <Container fluid>
             <Row>
-                <Col xs = {9} className="Menucontainer">
+                <Col xs = {9} className="Menucontainer" >
                     <Row>
                         <CloseButton className="GoBackBtn" onClick = {() => setShowList(Meal2)}/>
                     </Row>
                     <Row>
-                        <Catagory/>
+                        <Catagory />
                     </Row>
                     <Row >
-                        <MenuList Mlist = {ShowList.map(entry => entry)}/>
+                        <MenuList Mlist = {ShowList}/>
                     </Row>
                 </Col>
                 <Col> 
