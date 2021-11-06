@@ -1,17 +1,25 @@
-import {Card, Button} from 'react-bootstrap';
+import { Card, Button, Row, Col } from 'react-bootstrap';
+
+
 
 function Meal(MealInfo, index) {
     return (    
         <Card style={{ width: '18rem' }} key={index} className="box">
-            <Card.Img variant="top" src={MealInfo.image} />
+            <Card.Img variant="top" src={MealInfo.image} className = "card-img-top" />
             <Card.Body>
                 <Card.Title>
                     {MealInfo.title}
                 </Card.Title>
-                <Card.Text>
-                    {MealInfo.text}
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <Row>
+                    <Col xs = {8}>
+                        <Card.Text>
+                            {MealInfo.text}
+                        </Card.Text>
+                    </Col>
+                    <Col>
+                        <Button variant="primary">Add to order</Button>
+                    </Col>
+                </Row>
             </Card.Body>
         </Card>
     )
