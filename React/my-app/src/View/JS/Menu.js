@@ -3,9 +3,8 @@ import { useState } from 'react';
 import MenuList from './MenuList/MenuList';
 import MealInfo from './MenuInfo/MealInfo';
 import '../CSS/Box.css'
-import { MealinfoL, Meal2 } from '../../Model/Data';
 import Catagory from './MenuList/Catagory';
-
+import { MealinfoL, Meal2 } from '../../Model/Data';
 
 function Menu() {
     const [ShowList, setShowList] = useState(MealinfoL);
@@ -15,10 +14,10 @@ function Menu() {
             <Row>
                 <Col xs = {9} className="Menucontainer" >
                     <Row>
-                        <CloseButton className="GoBackBtn" onClick = {() => setShowList(Meal2)}/>
+                        <CloseButton className="GoBackBtn"/>
                     </Row>
                     <Row>
-                        <Catagory />
+                        <Catagory onClick = {() => setShowList(Meal2)}/>
                     </Row>
                     <Row >
                         <MenuList Mlist = {ShowList}/>
