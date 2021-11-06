@@ -9,7 +9,7 @@ function Menu() {
             <Row>
                 <Col xs = {9} className="Menucontainer">
                 <Row>
-                    <CloseButton/>  
+                    <CloseButton className="GoBackBtn"/>  
                 </Row>
                     <Row>
                         <MenuList/>

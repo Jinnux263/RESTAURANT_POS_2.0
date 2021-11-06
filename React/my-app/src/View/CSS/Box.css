@@ -29,3 +29,8 @@
   height: 15vw;
   object-fit: cover;
 }
+
+.GoBackBtn{
+  margin-left: 40px;
+  margin-top: 20px;
+}
