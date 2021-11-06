@@ -4,7 +4,7 @@ import MenuList from './MenuList/MenuList';
 import MealInfo from './MenuInfo/MealInfo';
 import '../CSS/Box.css'
 import Catagory from './MenuList/Catagory';
-import { MealinfoL, Meal2 } from '../../Model/Data';
+import { MealinfoL, Meal2, Coca, Cupcake, SeaFood, Juice } from '../../Model/Data';
 
 function Menu() {
     const [ShowList, setShowList] = useState(MealinfoL);
