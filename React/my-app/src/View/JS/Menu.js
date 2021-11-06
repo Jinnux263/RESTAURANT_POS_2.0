@@ -1,16 +1,16 @@
 import {Col, Row, Container, CloseButton} from 'react-bootstrap';
 import MenuList from './MenuList/MenuList';
 import MealInfo from './MenuInfo/MealInfo';
-
+import '../CSS/Box.css'
 
 function Menu() {
     return (
-        <Container>
+        <Container fluid>
             <Row>
-                <CloseButton/>  
-            </Row>
-            <Row>
-                <Col xs = {8}>
+                <Col xs = {9} className="Menucontainer">
+                <Row>
+                    <CloseButton/>  
+                </Row>
                     <Row>
                         <MenuList/>
                     </Row>

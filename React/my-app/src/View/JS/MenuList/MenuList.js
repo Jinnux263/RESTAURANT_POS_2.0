@@ -5,19 +5,27 @@ import chicken from "../../../Img/Chicken.png"
 import fish from "../../../Img/Fish.png"
 import meat from "../../../Img/Meat.png"
 import standard from "../../../Img/Standard.png"
+import '../../CSS/Box.css'
 
 const Mealinfo = [
     {image:chicken, title: 'Chicken', text: 'This is example description'},
     {image:fish, title: 'Fish', text: 'This is example description'},
     {image:meat, title: 'Meat', text: 'This is example description'},
     {image:standard, title: 'Standard Meal', text: 'This is example description'},
-    
+    {image:chicken, title: 'Chicken', text: 'This is example description'},
+    {image:fish, title: 'Fish', text: 'This is example description'},
+    {image:meat, title: 'Meat', text: 'This is example description'},
+    {image:standard, title: 'Standard Meal', text: 'This is example description'},
+    {image:chicken, title: 'Chicken', text: 'This is example description'},
+    {image:fish, title: 'Fish', text: 'This is example description'},
+    {image:meat, title: 'Meat', text: 'This is example description'},
+    {image:standard, title: 'Standard Meal', text: 'This is example description'},
 ]
 
 function Meal(MealInfo, index) {
     return (    
         <Card style={{ width: '18rem' }} key={index} className="box">
-            <Card.Img variant="top" src={MealInfo.image} />
+            <Card.Img variant="top" src={MealInfo.image} class = "card-img-top" />
             <Card.Body>
                 <Card.Title>
                     {MealInfo.title}

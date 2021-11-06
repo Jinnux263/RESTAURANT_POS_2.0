@@ -1,8 +1,9 @@
 //import {Col, Row, Container, Card, Button} from 'react-bootstrap';
+import '../../CSS/Box.css'
 
 function MealInfo() {
     return (
-        <div style = {{backgroundColor: "black"}}>
+        <div className="MealInfoContainer">
             MealInfo
         </div>
     )
