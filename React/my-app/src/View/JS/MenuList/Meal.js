@@ -17,7 +17,7 @@ function Meal(MealInfo, index) {
                         </Card.Text>
                     </Col>
                     <Col>
-                        <Button variant="primary">Add to order</Button>
+                        <Button variant="primary">Add</Button>
                     </Col>
                 </Row>
             </Card.Body>
