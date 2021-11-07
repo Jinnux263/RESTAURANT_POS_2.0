@@ -13,7 +13,7 @@ function Meal(MealInfo, index) {
                 <Row>
                     <Col>
                         <Card.Text>
-                            {MealInfo.price}
+                            ${MealInfo.price}
                         </Card.Text>
                     </Col>
                     <Col>

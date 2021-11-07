@@ -22,18 +22,18 @@ const Coca = [
 ]
 
 const Normal = [
-    {image:chicken, title: 'Chicken', price: '$50.000'},
-    {image:fish, title: 'Fish', price: '$35.000'},
-    {image:meat, title: 'Meat', price: '$24.000'},
-    {image:standard, title: 'Standard Meal', price: '$30.000'},
-    {image:chicken, title: 'Chicken2', price: '$50.000'},
-    {image:fish, title: 'Fish2', price: '$35.000'},
-    {image:meat, title: 'Meat2', price: '$24.000'},
-    {image:standard, title: 'Standard Meal2', price: '$30.000'},
-    {image:chicken, title: 'Chicken', price: '$50.000'},
-    {image:fish, title: 'Fish', price: '$35.000'},
-    {image:meat, title: 'Meat', price: '$24.000'},
-    {image:standard, title: 'Standard Meal', price: '$30.000'},
+    {image:chicken, title: 'Chicken', price: 50},
+    {image:fish, title: 'Fish', price: 35},
+    {image:meat, title: 'Meat', price: 24},
+    {image:standard, title: 'Standard Meal', price: 30},
+    {image:chicken, title: 'Chicken2', price: 50},
+    {image:fish, title: 'Fish2', price: 35},
+    {image:meat, title: 'Meat2', price: 24},
+    {image:standard, title: 'Standard Meal2', price: 30},
+    {image:chicken, title: 'Chicken3', price: 50},
+    {image:fish, title: 'Fish3', price: 35},
+    {image:meat, title: 'Meat3', price: 24},
+    {image:standard, title: 'Standard Meal3', price: 30},
 ]
 
 export { Normal, Coca, Cupcake, SeaFood, Juice }
