@@ -23,7 +23,7 @@
 }
 
 .grid > div {
-  flex-basis: calc(30% - 5px);
+  flex-basis: calc(21% - 5px);
 }
 
 .card-img-top {
