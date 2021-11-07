@@ -38,6 +38,7 @@
     margin-left: 40px;
     margin-top: 20px;
     margin-bottom: 10px;
+    
 }
 
 .CataBlock {
@@ -75,6 +76,21 @@
 .btn{
     background-color: red;
     font-weight: bolder;
+    border: 1px solid black;
+}
+
+.btnCancel{
+    background-color: red;
+    font-weight: bolder;
+    border: 1px solid black;
+    margin: 5px auto;
+}
+
+.btnPayment{
+    background-color: red;
+    font-weight: bolder;
+    border: 1px solid black;
+    margin: 5px auto;
 }
 
 .cartItem{

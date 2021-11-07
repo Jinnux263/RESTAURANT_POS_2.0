@@ -8,7 +8,7 @@ function calSum(list) {
     0);
 }
 function MealInfo(props) {
-    //console.log(props.CartList)
+    //console.log(props)
     return (
         <Container className="MealInfoContainer" >
             <h2 className = "header">Your cart</h2>
@@ -24,7 +24,8 @@ function MealInfo(props) {
                         {calSum(props.CartList)}
                     </Col>
                 </Row>
-                <Button className="btn">PAYMENT</Button>
+                <Button className="btnCancel" onClick = {() => props.handlefunc()}>CANCEL</Button>
+                <Button className="btnPayment">PAYMENT</Button>
             </Row>
         </Container>
     )

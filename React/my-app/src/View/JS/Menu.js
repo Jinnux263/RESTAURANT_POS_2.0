@@ -26,18 +26,15 @@ function Menu() {
             return [...prev, { ...clickedItem, amount: 1 }];
             });
     }
-    //console.log(cartItems)
-    // const handleAddToCart = (clickedItem) => {
-    //     //console.log(clickedItem)
-    //     setCartItems(prev => {
-    //         return [...prev, clickedItem];
-    //     });
-    // }
+
+    const HandleClearCart = () => {
+        setCartItems([]);
+    }
 
     const handleClickCata = (item) => {
         setShowList(item)
     }
-
+    console.log(cartItems)
     return (
         <Container fluid>
             <Row>
@@ -69,7 +66,7 @@ function Menu() {
                     </Row>
                 </Col>
                 <Col> 
-                    <MealInfo CartList = {cartItems}/>
+                    <MealInfo CartList = {cartItems} handlefunc = {HandleClearCart}/>
                 </Col>
             </Row>
     </Container>
