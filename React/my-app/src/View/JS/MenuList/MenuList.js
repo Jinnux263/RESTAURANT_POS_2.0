@@ -1,4 +1,3 @@
-import Meal from './Meal';
 import { Card, Button, Row, Col } from 'react-bootstrap';
 import '../../CSS/Menu.css'
 
