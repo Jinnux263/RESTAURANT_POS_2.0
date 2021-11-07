@@ -1,20 +1,27 @@
-import {Col, Row, Container, Card, Button} from 'react-bootstrap';
+import {Col, Row, Container, Card, Button, Stack} from 'react-bootstrap';
 import '../../CSS/Menu.css'
+import Item from './Item';
 
-function MealInfo() {
+function calSum(list) {
+    let init = 0;
+    return list.reduce(( previousValue, current ) => previousValue + current.amount * current.price,
+    0);
+}
+function MealInfo(props) {
+    //console.log(props.CartList)
     return (
         <Container className="MealInfoContainer" >
             <h2 className = "header">Your cart</h2>
-            <Row className="OrderListContainer">
-                List
+            <Row className="OrderListContainer" xs = {7}> 
+                    {props.CartList.map((item) => <Item input = {item}/>)}
             </Row>
             <Row className = "PaymentInfo">
-                <Row>
+                <Row style={{fontSize:'30px'}}>
                     <Col>
-                        Total:
+                        Total
                     </Col>
                     <Col>
-                        0
+                        {calSum(props.CartList)}
                     </Col>
                 </Row>
                 <Button className="btn">PAYMENT</Button>

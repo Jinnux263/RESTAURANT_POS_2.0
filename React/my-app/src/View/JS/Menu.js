@@ -26,7 +26,7 @@ function Menu() {
             return [...prev, { ...clickedItem, amount: 1 }];
             });
     }
-    console.log(cartItems)
+    //console.log(cartItems)
     // const handleAddToCart = (clickedItem) => {
     //     //console.log(clickedItem)
     //     setCartItems(prev => {
@@ -69,7 +69,7 @@ function Menu() {
                     </Row>
                 </Col>
                 <Col> 
-                    <MealInfo/>
+                    <MealInfo CartList = {cartItems}/>
                 </Col>
             </Row>
     </Container>
