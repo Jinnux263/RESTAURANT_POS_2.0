@@ -11,7 +11,7 @@ function Meal(MealInfo, index) {
                     {MealInfo.title}
                 </Card.Title>
                 <Row>
-                    <Col xs = {8}>
+                    <Col>
                         <Card.Text>
                             {MealInfo.text}
                         </Card.Text>

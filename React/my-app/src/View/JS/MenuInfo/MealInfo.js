@@ -1,5 +1,5 @@
 //import {Col, Row, Container, Card, Button} from 'react-bootstrap';
-import '../../CSS/Box.css'
+import '../../CSS/Menu.css'
 
 function MealInfo() {
     return (

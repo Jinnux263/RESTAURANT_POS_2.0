@@ -21,7 +21,7 @@ const Coca = [
 
 ]
 
-const MealinfoL = [
+const Normal = [
     {image:chicken, title: 'Chicken', text: '$50.000'},
     {image:fish, title: 'Fish', text: '$35.000'},
     {image:meat, title: 'Meat', text: '$24.000'},
@@ -36,4 +36,4 @@ const MealinfoL = [
     {image:standard, title: 'Standard Meal', text: '$30.000'},
 ]
 
-export { MealinfoL, Coca, Cupcake, SeaFood, Juice }
+export { Normal, Coca, Cupcake, SeaFood, Juice }

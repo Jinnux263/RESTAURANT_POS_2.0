@@ -1,12 +1,55 @@
-#MenuList {
-    background-color: aqua;
+
+.box {
+    margin: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+    width: 100%;
+
+
 }
 
-#MenuInfor {
-    background-color: black;
-}
-.test {
+.grid {
+    max-height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    overflow: scroll;
+    overflow-x: hidden;
+
     width: 100%;
-    height: 15vw;
+}
+
+.Menucontainer{
+    height: 100vh;
+    overflow:visible;
+}
+
+.MealInfoContainer{
+    height: 100vh;
+}
+
+.grid > div {
+    flex-basis: calc(21% - 5px);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 15vh;
     object-fit: cover;
 }
+
+.GoBackBtn{
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.CataBlock {
+    border:1px solid red;
+    margin: 5px;
+    border-radius: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    
+}
+

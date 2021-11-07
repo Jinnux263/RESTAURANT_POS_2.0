@@ -1,9 +1,9 @@
 import Meal from './Meal';
-import '../../CSS/Box.css'
+import '../../CSS/Menu.css'
 
 function MenuList(Mlist) {
     return (
-        <div className="grid MenuListContainer">{Mlist.Mlist.map(Meal)}</div>
+        <div className="grid">{Mlist.Mlist.map(Meal)}</div>
     )
 }
 

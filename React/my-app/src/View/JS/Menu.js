@@ -2,13 +2,12 @@ import {Col, Row, Container, CloseButton, Card, CardGroup} from 'react-bootstrap
 import { useState } from 'react';
 import MenuList from './MenuList/MenuList';
 import MealInfo from './MenuInfo/MealInfo';
-import '../CSS/Box.css'
-import Catagory from './MenuList/Catagory';
-import { MealinfoL, Coca, Cupcake, SeaFood, Juice} from '../../Model/Data';
+import '../CSS/Menu.css'
+import { Normal , Coca, Cupcake, SeaFood, Juice} from '../../Model/Data';
 
 function Menu() {
-    const [ShowList, setShowList] = useState(MealinfoL);
-    
+    const [ShowList, setShowList] = useState(Normal);
+    const [cart, setCart] = useState(0);
     const handleClick = (inp) => {
         setShowList(inp)
     }
@@ -21,7 +20,7 @@ function Menu() {
                     </Row>
                     <Row>
                         <CardGroup>
-                            <Card.Body className = 'CataBlock' onClick = {() => handleClick(MealinfoL)}>
+                            <Card.Body className = 'CataBlock' onClick = {() => handleClick(Normal)}>
                                 <Card.Title>Normal</Card.Title>
                             </Card.Body>
                             <Card.Body className = 'CataBlock' onClick = {() => handleClick(Cupcake)}>
