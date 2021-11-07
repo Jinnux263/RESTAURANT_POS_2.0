@@ -1,4 +1,4 @@
-//import {Col, Row, Container, Card, Button} from 'react-bootstrap';
+import {Col, Row, Container, Card, Button} from 'react-bootstrap';
 import '../../CSS/Menu.css'
 
 function MealInfo() {

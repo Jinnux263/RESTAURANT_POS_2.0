@@ -1,7 +1,7 @@
-import chicken from "../Img/Chicken.png"
-import fish from "../Img/Fish.png"
-import meat from "../Img/Meat.png"
-import standard from "../Img/Standard.png"
+import chicken from "../Img/Normal/Chicken.png"
+import fish from "../Img/Normal/Fish.png"
+import meat from "../Img/Normal/Meat.png"
+import standard from '../Img/Normal/Standard.png'
 
 
 const Cupcake = [
