@@ -26,6 +26,7 @@ const Coca = [
 ]
 
 const Normal = [
+<<<<<<< Updated upstream
     {id: 1,image:chicken, title: 'Chicken', price: 50},
     {id: 1, image:fish, title: 'Fish', price: 35},
     {id: 1, image:meat, title: 'Meat', price: 24},
@@ -38,6 +39,22 @@ const Normal = [
     {id: 1, image:standard, title: 'Standard Meal2', price: 30},
     {id: 1, image:chicken, title: 'Chicken4', price: 50},
     {id: 1, image:fish, title: 'Fish4', price: 35},
+=======
+    {image:chicken, title: 'Chicken', text: '$50.000'},
+    {image:fish, title: 'Fish', text: '$35.000'},
+    {image:meat, title: 'Meat', text: '$24.000'},
+    {image:standard, title: 'Standard Meal', text: '$30.000'},
+    {image:chicken, title: 'Chicken2', text: '$50.000'},
+    {image:fish, title: 'Fish2', text: '$35.000'},
+    {image:meat, title: 'Meat2', text: '$24.000'},
+    {image:standard, title: 'Standard Meal2', text: '$30.000'},
+    {image:chicken, title: 'Chicken', text: '$50.000'},
+    {image:fish, title: 'Fish', text: '$35.000'},
+    {image:meat, title: 'Meat', text: '$24.000'},
+    {image:standard, title: 'Standard Meal', text: '$30.000'},
+    {image:standard, title: 'Standard Meal', text: '$30.000'},
+    
+>>>>>>> Stashed changes
 ]
 
 export { Normal, Coca, Cupcake, SeaFood, Juice }
