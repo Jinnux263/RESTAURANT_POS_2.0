@@ -1,7 +1,5 @@
 import { Card, Button, Row, Col } from 'react-bootstrap';
 
-
-
 function Meal(MealInfo, index) {
     return (    
         <Card style={{ width: '18rem' }} key={index} className="box">
@@ -17,7 +15,7 @@ function Meal(MealInfo, index) {
                         </Card.Text>
                     </Col>
                     <Col>
-                        <Button variant="primary" className="btn">Add</Button>
+                        <Button variant="primary" className="btn" onClick = {() => console.log(MealInfo)}>Add</Button>
                     </Col>
                 </Row>
             </Card.Body>

@@ -10,9 +10,34 @@ function Menu() {
     const [ShowList, setShowList] = useState(Normal);
     const [cartItems, setCartItems] = useState([]);
 
-    const handleClick = (inp) => {
-        setShowList(inp)
+    const handleAddToCart = (clickedItem) => {
+        setCartItems(prev => {
+            // 1. Is the item already added in the cart?
+            const isItemInCart = prev.find(item => item.id === clickedItem.id);
+
+            if (isItemInCart) {
+                return prev.map(item =>
+                item.id === clickedItem.id
+                    ? { ...item, amount: item.amount + 1 }
+                    : item
+                );
+            }
+            // First time the item is added
+            return [...prev, { ...clickedItem, amount: 1 }];
+            });
     }
+    console.log(cartItems)
+    // const handleAddToCart = (clickedItem) => {
+    //     //console.log(clickedItem)
+    //     setCartItems(prev => {
+    //         return [...prev, clickedItem];
+    //     });
+    // }
+
+    const handleClickCata = (item) => {
+        setShowList(item)
+    }
+
     return (
         <Container fluid>
             <Row>
@@ -22,25 +47,25 @@ function Menu() {
                     </Row>
                     <Row>
                         <CardGroup>
-                            <Card.Body className = 'CataBlock' onClick = {() => handleClick(Normal)}>
+                            <Card.Body className = 'CataBlock' onClick = {() => handleClickCata(Normal)}>
                                 <Card.Title>Normal</Card.Title>
                             </Card.Body>
-                            <Card.Body className = 'CataBlock' onClick = {() => handleClick(Cupcake)}>
+                            <Card.Body className = 'CataBlock' onClick = {() => handleClickCata(Cupcake)}>
                                 <Card.Title>Cupcake</Card.Title>
                             </Card.Body>
-                            <Card.Body className = 'CataBlock' onClick = {() => handleClick(SeaFood)}>
+                            <Card.Body className = 'CataBlock' onClick = {() => handleClickCata(SeaFood)}>
                                 <Card.Title>Sea Food</Card.Title>
                             </Card.Body>
-                            <Card.Body className = 'CataBlock' onClick = {() => handleClick(Juice)}>
+                            <Card.Body className = 'CataBlock' onClick = {() => handleClickCata(Juice)}>
                                 <Card.Title>Juice</Card.Title>
                             </Card.Body>
-                            <Card.Body className = 'CataBlock' onClick = {() => handleClick(Coca)}>
+                            <Card.Body className = 'CataBlock' onClick = {() => handleClickCata(Coca)}>
                                 <Card.Title>Coca</Card.Title>
                             </Card.Body>
                         </CardGroup>
                     </Row>
                     <Row >
-                        <MenuList Mlist = {ShowList}/>
+                        <MenuList Mlist = {ShowList} handlefunc = {handleAddToCart}/>
                     </Row>
                 </Col>
                 <Col> 
