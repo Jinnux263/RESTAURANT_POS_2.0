@@ -5,19 +5,19 @@ import standard from '../Img/Normal/Standard.png'
 
 
 const Cupcake = [
-    {image:chicken, title: 'Cupcake', text: '$50.000'},
+    {image:chicken, title: 'Cupcake', price: 50},
 
 ]
 const SeaFood = [
-    {image:chicken, title: 'Sea Food', text: '$50.000'},
+    {image:chicken, title: 'Sea Food', price: 50},
 
 ]
 const Juice = [
-    {image:chicken, title: 'Juice', text: '$50.000'},
+    {image:chicken, title: 'Juice', price: 50},
 
 ]
 const Coca = [
-    {image:chicken, title: 'Coca', text: '$50.000'},
+    {image:chicken, title: 'Coca', price: 50},
 
 ]
 
