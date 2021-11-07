@@ -1,7 +1,7 @@
 
 .box {
     margin: 20px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     cursor: pointer;
     width: 100%;
 
@@ -24,10 +24,6 @@
     overflow:visible;
 }
 
-.MealInfoContainer{
-    height: 100vh;
-}
-
 .grid > div {
     flex-basis: calc(21% - 5px);
 }
@@ -45,11 +41,38 @@
 }
 
 .CataBlock {
-    border:1px solid red;
+    border:3px solid gray;
     margin: 5px;
     border-radius: 20px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     cursor: pointer;
     
+}
+
+.MealInfoContainer{
+    height: 100vh;
+    width: 100%;
+}
+
+.MealInfoContainer .header{
+    color: red;
+}
+
+.OrderListContainer {
+    padding: 10px;
+    height: 70vh;
+    width: 100%;
+    margin: 5px;
+    background-color: aqua;
+}
+
+.PaymentInfo{
+    height: 15vh;
+    margin-top: 20px;
+}
+
+.btn{
+    background-color: red;
+    font-weight: bolder;
 }
 

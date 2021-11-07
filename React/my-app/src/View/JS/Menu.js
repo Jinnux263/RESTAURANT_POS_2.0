@@ -5,9 +5,11 @@ import MealInfo from './MenuInfo/MealInfo';
 import '../CSS/Menu.css'
 import { Normal , Coca, Cupcake, SeaFood, Juice} from '../../Model/Data';
 
+
 function Menu() {
     const [ShowList, setShowList] = useState(Normal);
-    const [cart, setCart] = useState(0);
+    const [cartItems, setCartItems] = useState([]);
+
     const handleClick = (inp) => {
         setShowList(inp)
     }

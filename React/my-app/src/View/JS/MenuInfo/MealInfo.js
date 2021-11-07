@@ -3,9 +3,23 @@ import '../../CSS/Menu.css'
 
 function MealInfo() {
     return (
-        <div className="MealInfoContainer">
-            MealInfo
-        </div>
+        <Container className="MealInfoContainer" >
+            <h2 className = "header">Your cart</h2>
+            <Row className="OrderListContainer">
+                List
+            </Row>
+            <Row className = "PaymentInfo">
+                <Row>
+                    <Col>
+                        Total:
+                    </Col>
+                    <Col>
+                        0
+                    </Col>
+                </Row>
+                <Button className="btn">PAYMENT</Button>
+            </Row>
+        </Container>
     )
 }
 
