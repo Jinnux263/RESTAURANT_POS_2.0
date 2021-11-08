@@ -4,16 +4,17 @@ function Item(props) {
     //console.log(props.input)
     return (
         <Row className="cartItem">
+            
             <Col>
-                <Button onClick = {() => props.decFunc(props.input)}>-</Button>
-            </Col>
-            <Col xs={6}>
                 {props.input.title}:
             </Col>
-            <Col>
+            <Col xs = {2}>
+                <Button onClick = {() => props.decFunc(props.input)}>-</Button>
+            </Col>
+            <Col xs = {1}>
                 {props.input.amount}
             </Col>
-            <Col>
+            <Col xs = {2}>
                 <Button onClick = {() => props.incFunc(props.input)}>+</Button>
             </Col>
         </Row>

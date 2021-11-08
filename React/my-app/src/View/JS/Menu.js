@@ -41,15 +41,20 @@ function Menu() {
     //Khi an nut - ben canh san pham trong cart
     const decFunc = (clickedItem) => {
         setCartItems(prev => {
-            return prev.map(item =>
-            item.id === clickedItem.id
-                ? { ...item, amount: item.amount - 1 }
-                : item
-            );
+            return prev.reduce((base, item) => {
+                if (item.id === clickedItem.id) {
+                    if (item.amount === 1) {
+                        return base
+                    } else {
+                        return [...base, { ...item, amount: item.amount - 1 }]
+                    }
+                } else {
+                    return [...base, item]
+                }
+            }, []);
         });
     }
 
-    //console.log(cartItems)
     //Huy bo ca order
     const handleCancelCart = () => {
         //console.log(clickedItem)

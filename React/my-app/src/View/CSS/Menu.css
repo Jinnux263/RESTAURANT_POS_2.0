@@ -64,6 +64,8 @@
     max-height: 70vh;
     width: 100%;
     margin: 5px;
+    overflow: scroll;
+    overflow-x: hidden
 }
 
 .PaymentInfo{
@@ -94,9 +96,9 @@
 }
 
 .cartItem{
-    min-height: 30px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    min-height: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     font-size: large;
     font-weight: bolder;
 }
