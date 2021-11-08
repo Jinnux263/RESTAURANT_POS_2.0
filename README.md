@@ -42,4 +42,5 @@ yarn build
 to build the project to publish to user
 # Final result
 
-![Uploading image.png…]()
+![image](https://user-images.githubusercontent.com/55391896/140681420-69375a8b-fa88-426f-a509-53dce2f42c6e.png)
+
