@@ -11,6 +11,7 @@ function Menu() {
     const [ShowList, setShowList] = useState(All);
     const [cartItems, setCartItems] = useState([]);
 
+    //Them san pham vao trong cart
     const handleAddToCart = (clickedItem) => {
         setCartItems(prev => {
             // 1. Is the item already added in the cart?
@@ -27,12 +28,35 @@ function Menu() {
             return [...prev, { ...clickedItem, amount: 1 }];
             });
     }
+    //Khi an nut + ben canh san pham trong cart
+    const incFunc = (clickedItem) => {
+        setCartItems(prev => {
+            return prev.map(item =>
+            item.id === clickedItem.id
+                ? { ...item, amount: item.amount + 1 }
+                : item
+            );
+        });
+    }
+    //Khi an nut - ben canh san pham trong cart
+    const decFunc = (clickedItem) => {
+        setCartItems(prev => {
+            return prev.map(item =>
+            item.id === clickedItem.id
+                ? { ...item, amount: item.amount - 1 }
+                : item
+            );
+        });
+    }
+
     //console.log(cartItems)
+    //Huy bo ca order
     const handleCancelCart = () => {
         //console.log(clickedItem)
         setCartItems([]);
     }
 
+    //Loc mon an theo catagory
     const handleClickCata = (item) => {
         setShowList(item)
     }
@@ -69,7 +93,7 @@ function Menu() {
                     </Row>
                 </Col>
                 <Col> 
-                    <MealInfo CartList = {cartItems} handlefunc = {handleCancelCart}/>
+                    <MealInfo CartList = {cartItems} handlefunc= {handleCancelCart} incfunc = {incFunc} decFunc = {decFunc}/>
                 </Col>
             </Row>
     </Container>
