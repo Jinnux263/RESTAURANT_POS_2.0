@@ -109,3 +109,21 @@
     object-fit: cover;
     padding: 0;
 }
+
+.boldText {
+    font-weight: bolder;
+}
+
+.Mealdetail{
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: 20vh;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.DetailQuantity{
+    text-align:center;
+    font-size: 30px;
+    font-weight: bolder;
+}

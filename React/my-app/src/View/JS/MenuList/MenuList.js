@@ -1,7 +1,6 @@
 import { Card, Button, Row, Col, Modal, Container, Figure, Image} from 'react-bootstrap';
 import { useState } from 'react';
 import '../../CSS/Menu.css'
-import Popup from './../Popup/Popup';
 
 function MenuList(props) {
     //console.log(props)
@@ -47,10 +46,57 @@ function MenuList(props) {
         </div>
 
         {
-            //Popup when click to meal
+            /*
+            Popup when click to meal
+            */
         }
-        <Popup show={show} handleClose={handleClose} itemPopup= {itemPopup} centered size="lg"/>
-        
+        <Modal show={show} onHide={handleClose} centered size="lg">
+            <Modal.Header closeButton>
+                <Modal.Title>ADD TO CART</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <Container>
+                    <Row>
+                        <Col xs={12} md={4}>
+                            <Container >
+                                <Row>
+                                    <Image src={itemPopup.image} rounded className="DetailImgContainer"/>
+                                </Row>
+                            </Container>
+                        </Col>
+                        <Col xs={6} md={8}>
+                            <Row className = "boldText">
+                                <Col>ID</Col>
+                                <Col>{itemPopup.title}</Col>
+                                <Col>Unit Price</Col>
+                            </Row>
+                            <Row>
+                                <Col>{itemPopup.id}</Col>
+                                <Col></Col>
+                                <Col>{itemPopup.price}</Col>
+                            </Row>
+                            <Row className="DetailQuantity">
+                                <Col>Quantity</Col>
+                                <Col></Col>
+                                <Col>0</Col>
+                            </Row>
+                            <Row className="Mealdetail">
+                                <Row>Protein:</Row>
+                                <Row>Assitives:</Row>
+                                <Row>Baking material:</Row>
+                                <Row>Food decoration:</Row>
+                            </Row>
+                        </Col>
+                    </Row>
+                </Container>
+                
+            </Modal.Body>
+            <Modal.Footer>
+                <Button onClick = {() => {props.handlefunc(itemPopup); handleClose()}}>
+                    Add this meal to cart
+                </Button>
+            </Modal.Footer>
+        </Modal>
         </>
     )
 }
