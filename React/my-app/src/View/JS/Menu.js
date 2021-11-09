@@ -12,7 +12,7 @@ function Menu() {
     const [cartItems, setCartItems] = useState([]);
 
     //Them san pham vao trong cart
-    const handleAddToCart = (clickedItem) => {
+    const handleAddToCart = (clickedItem, quantity = 1) => {
         setCartItems(prev => {
             // 1. Is the item already added in the cart?
             const isItemInCart = prev.find(item => item.id === clickedItem.id);
@@ -20,7 +20,7 @@ function Menu() {
             if (isItemInCart) {
                 return prev.map(item =>
                 item.id === clickedItem.id
-                    ? { ...item, amount: item.amount + 1 }
+                    ? { ...item, amount: item.amount + quantity }
                     : item
                 );
             }

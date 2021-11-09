@@ -1,17 +1,20 @@
-import { Card, Button, Row, Col, Modal, Container, Figure, Image} from 'react-bootstrap';
+import { Card, Button, Row, Col, Modal, Container, Image} from 'react-bootstrap';
 import { useState } from 'react';
 import '../../CSS/Menu.css'
 
 function MenuList(props) {
     //console.log(props)
     const [show, setShow] = useState(false);
-    const [itemPopup, setItemPopup] = useState(props.Mlist[0])
+    const [itemPopup, setItemPopup] = useState({...props.Mlist[0], quantity: 1 })
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    const handlePopup = (item) => setItemPopup(item)
+    const handlePopup = (item) => setItemPopup({...item, quantity: 1})
 
-
+    function handleMinus() {
+        setItemPopup({...itemPopup, quantity: itemPopup.quantity - 1})
+    }
+    //console.log(itemPopup)
     return (
         <>
 
@@ -76,15 +79,18 @@ function MenuList(props) {
                                 <Col>{itemPopup.price}</Col>
                             </Row>
                             <Row className="DetailQuantity">
-                                <Col>Quantity</Col>
-                                <Col></Col>
-                                <Col>0</Col>
+                                <Col xs = {6}>Quantity</Col>
+                                <Col xs = {2}>
+                                    <Button>-</Button></Col>
+                                <Col xs = {2}>{itemPopup.quantity}</Col>
+                                <Col xs = {1}>
+                                    <Button>+</Button></Col>
                             </Row>
                             <Row className="Mealdetail">
-                                <Row>Protein:</Row>
-                                <Row>Assitives:</Row>
-                                <Row>Baking material:</Row>
-                                <Row>Food decoration:</Row>
+                                <Row>Protein: {itemPopup.price}</Row>
+                                <Row>Assitives: {itemPopup.price}</Row>
+                                <Row>Baking material: {itemPopup.price}</Row>
+                                <Row>Food decoration: {itemPopup.price}</Row>
                             </Row>
                         </Col>
                     </Row>
@@ -92,7 +98,7 @@ function MenuList(props) {
                 
             </Modal.Body>
             <Modal.Footer>
-                <Button onClick = {() => {props.handlefunc(itemPopup); handleClose()}}>
+                <Button onClick = {() => {props.handlefunc(itemPopup, itemPopup.quantity); handleClose()}}>
                     Add this meal to cart
                 </Button>
             </Modal.Footer>
