@@ -13,6 +13,8 @@ import spaghetti from "../Img/Normal/Spaghetti.jpg"
 import squid from "../Img/Normal/Squid.jpg"
 import steak from "../Img/Normal/Steak.jpg"
 
+
+//Them mot truong thong tin cho cacs mon an, la phan detail gom cacs truong protein, additive, baking material, food decoration 
 const Meat = [
     {id: 1, image:chicken, title: 'Chicken', price: 75},
     {id: 2, image:lamp, title: 'Lamp', price: 40},

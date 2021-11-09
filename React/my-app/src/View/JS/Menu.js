@@ -94,7 +94,7 @@ function Menu() {
                         </CardGroup>
                     </Row>
                     <Row >
-                        <MenuList Mlist = {ShowList} handlefunc = {handleAddToCart}/>
+                        <MenuList Mlist = {ShowList} handlefunc = {handleAddToCart} incfunc = {incFunc} decFunc = {decFunc}/>
                     </Row>
                 </Col>
                 <Col> 
