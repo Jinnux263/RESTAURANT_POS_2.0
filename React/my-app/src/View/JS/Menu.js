@@ -1,7 +1,9 @@
 import {Col, Row, Container, CloseButton, Card, CardGroup} from 'react-bootstrap';
 import { useState } from 'react';
+import React from 'react';
 import MenuList from './MenuList/MenuList';
 import MealInfo from './MenuInfo/MealInfo';
+import Navbar from './navbar';
 import '../CSS/Menu.css'
 import { All , Meat, SeaFood, Dessert, Drink} from '../../Model/Data';
 // import { BsFillHouseDoorFill } from "react-icons/bs";
@@ -68,41 +70,40 @@ function Menu() {
     }
 
     return (
-        <Container fluid>
+        <div className="container mt-5 p-3 rounded cart" style={{background:"#eee",marginBottom:"5rem"}}>
             <Row>
-                <Col xs = {9} className="Menucontainer" >
+                <Col xs = {12} md = {12} lg = {9} className="Menucontainer" >
                     <Row>
-                        <CloseButton className="GoBackBtn"/>
-                        {/* <BsFillHouseDoorFill/> */}
+                        <Navbar />
                     </Row>
                     <Row>
                         <CardGroup>
-                            <Card.Body className = 'CataBlock' onClick = {() => handleClickCata(All)}>
+                            <Card.Body className="btn btn-outline-primary text-white border-1" onClick = {() => handleClickCata(All)}>
                                 <Card.Title>All</Card.Title>
                             </Card.Body>
-                            <Card.Body className = 'CataBlock' onClick = {() => handleClickCata(Meat)}>
+                            <Card.Body className="btn btn-outline-primary text-white bg-red border-1" onClick = {() => handleClickCata(Meat)}>
                                 <Card.Title>Meat</Card.Title>
                             </Card.Body>
-                            <Card.Body className = 'CataBlock' onClick = {() => handleClickCata(SeaFood)}>
+                            <Card.Body className="btn btn-outline-primary text-white bg-red border-1" onClick = {() => handleClickCata(SeaFood)}>
                                 <Card.Title>Sea Food</Card.Title>
                             </Card.Body>
-                            <Card.Body className = 'CataBlock' onClick = {() => handleClickCata(Dessert)}>
+                            <Card.Body className="btn btn-outline-primary text-white bg-red border-1" onClick = {() => handleClickCata(Dessert)}>
                                 <Card.Title>Dessert</Card.Title>
                             </Card.Body>
-                            <Card.Body className = 'CataBlock' onClick = {() => handleClickCata(Drink)}>
+                            <Card.Body className="btn btn-outline-primary text-white bg-red border-1" onClick = {() => handleClickCata(Drink)}>
                                 <Card.Title>Drink</Card.Title>
                             </Card.Body>
                         </CardGroup>
                     </Row>
-                    <Row >
+                    <Row className="col-xs-12">
                         <MenuList Mlist = {ShowList} handlefunc = {handleAddToCart} incfunc = {incFunc} decFunc = {decFunc}/>
                     </Row>
                 </Col>
-                <Col> 
-                    <MealInfo CartList = {cartItems} handlefunc= {handleCancelCart} incfunc = {incFunc} decFunc = {decFunc}/>
+                <Col className="payment-info" style={{marginRight:"2rem",marginLeft:"2rem"}}> 
+                    <MealInfo CartList = {cartItems} handlefunc= {handleCancelCart} incfunc = {incFunc} decFunc = {decFunc} style/>
                 </Col>
             </Row>
-    </Container>
+    </div>
     )
 }
 
