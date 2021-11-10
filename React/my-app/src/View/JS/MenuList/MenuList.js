@@ -39,7 +39,7 @@ function MenuList(props) {
             {props.Mlist.map( (MealInfo , index) => {
                 return (
                     
-                    <Card style={{ width: '18rem' }} key={index} className="box" onClick={() => {handlePopup(MealInfo); handleShow()}}>
+                    <Card key={index} className="box" onClick={() => {handlePopup(MealInfo); handleShow()}}>
                         <Card.Img variant="top" src={MealInfo.image} className = "card-img-top" />
                         <Card.Body>
                             <Card.Title>
@@ -47,7 +47,7 @@ function MenuList(props) {
                             </Card.Title>
                             <Row>
                                 <Col>
-                                    <Card.Text>
+                                    <Card.Text style={{fontWeight:"bolder"}}>
                                         ${MealInfo.price}
                                     </Card.Text>
                                 </Col>
