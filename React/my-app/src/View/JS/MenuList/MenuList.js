@@ -74,30 +74,30 @@ function MenuList(props) {
             <Modal.Body>
                 <Container>
                     <Row>
-                        <Col xs={12} md={4}>
-                            <Container >
+                        <Col xs={2} md={4} lg={2}>
                                 <Row>
                                     <Image src={itemPopup.image} rounded className="DetailImgContainer"/>
                                 </Row>
-                            </Container>
                         </Col>
-                        <Col xs={6} md={8}>
+                        <Col xs={10} md={8} lg={10}>
                             <Row className = "boldText">
-                                <Col>ID</Col>
-                                <Col>{itemPopup.title}</Col>
-                                <Col>Unit Price</Col>
+                                <Col xs={1}>ID</Col>
+                                <Col xs={2}>Food name</Col>
+                                <Col xs={3}>Unit Price</Col>
                             </Row>
                             <Row>
-                                <Col>{itemPopup.id}</Col>
-                                <Col></Col>
-                                <Col>{itemPopup.price}</Col>
+                                <Col xs={1}>{itemPopup.id}</Col>
+                                <Col xs={2}>{itemPopup.title}</Col>
+                                <Col xs={4}>{itemPopup.price}</Col>
                             </Row>
                             <Row className="DetailQuantity">
-                                <Col xs = {6}>Quantity</Col>
-                                <Col xs = {2}>
+                            <Col xs = {2}>Quantity:</Col>
+                                </Row>
+                            <Row className="DetailQuantity">
+                                <Col xs = {2} lg={1}>
                                     <Button onClick = {handleMinus}>-</Button></Col>
-                                <Col xs = {2}>{quantity}</Col>
-                                <Col xs = {1}>
+                                <Col xs = {2} lg={1}>{quantity}</Col>
+                                <Col xs = {1} lg={1}>
                                     <Button onClick = {handleAdd}>+</Button></Col>
                             </Row>
                             <Row className="Mealdetail">
