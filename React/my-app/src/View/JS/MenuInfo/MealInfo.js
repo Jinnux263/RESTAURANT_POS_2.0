@@ -10,17 +10,17 @@ function MealInfo(props) {
     //console.log("MenuInfo")
     return (
         <Container className="MealInfoContainer" >
-            <h2 className = "header">Your cart</h2>
-            <Row className="OrderListContainer" xs = {7}> 
+            <h2 className = "header" style={{marginTop:"2rem",fontSize:"3rem"}}>Your cart</h2>
+            <Row className="OrderListContainer" xs = {12}> 
                     {props.CartList.map((item, index) => <Item key = {index} input = {item} incFunc = {props.incfunc} decFunc = {props.decFunc}/>)}
             </Row>
             <Row className = "PaymentInfo">
                 <Row style={{fontSize:'30px'}}>
                     <Col>
-                        Total
+                        Total:
                     </Col>
                     <Col>
-                        {calSum(props.CartList)}
+                        ${calSum(props.CartList)}
                     </Col>
                 </Row>
                 <Button className="btnCancel" onClick = {() => props.handlefunc()}>CANCEL</Button>
