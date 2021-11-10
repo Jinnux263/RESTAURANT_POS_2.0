@@ -8,6 +8,7 @@ import { All , Meat, SeaFood, Dessert, Drink} from '../../Model/Data';
 
 
 function Menu() {
+    //console.log("App")
     const [ShowList, setShowList] = useState(All);
     const [cartItems, setCartItems] = useState([]);
 
@@ -25,7 +26,7 @@ function Menu() {
                 );
             }
             // First time the item is added
-            return [...prev, { ...clickedItem, amount: 1 }];
+            return [...prev, { ...clickedItem, amount: quantity }];
             });
     }
     //Khi an nut + ben canh san pham trong cart

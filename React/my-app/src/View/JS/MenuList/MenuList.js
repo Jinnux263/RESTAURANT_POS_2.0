@@ -3,16 +3,30 @@ import { useState } from 'react';
 import '../../CSS/Menu.css'
 
 function MenuList(props) {
-    //console.log(props)
+    //  console.log("MenuList")
     const [show, setShow] = useState(false);
-    const [itemPopup, setItemPopup] = useState({...props.Mlist[0], quantity: 1 })
+    const [itemPopup, setItemPopup] = useState(props.Mlist[0])
+    const [quantity, setQuantity] = useState(1)
+
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    const handlePopup = (item) => setItemPopup({...item, quantity: 1})
+    const handlePopup = (item) => setItemPopup(item)
 
     function handleMinus() {
-        setItemPopup({...itemPopup, quantity: itemPopup.quantity - 1})
+        if (quantity > 1) {
+            setQuantity(quantity - 1)
+        } else {
+            setQuantity(1)
+        }
+        // Co the them truong hop else o day de cho nguoi dung khong khai thac duoc lo hong bang cach dat quantity am, neu quantity khong lon hon 0 thi luon dat quantity = 0 cho chac
+        
+    }
+    function handleAdd() {
+        setQuantity(quantity + 1)
+    }
+    function resetQuantity() {
+        setQuantity(1)
     }
     //console.log(itemPopup)
     return (
@@ -81,10 +95,10 @@ function MenuList(props) {
                             <Row className="DetailQuantity">
                                 <Col xs = {6}>Quantity</Col>
                                 <Col xs = {2}>
-                                    <Button>-</Button></Col>
-                                <Col xs = {2}>{itemPopup.quantity}</Col>
+                                    <Button onClick = {handleMinus}>-</Button></Col>
+                                <Col xs = {2}>{quantity}</Col>
                                 <Col xs = {1}>
-                                    <Button>+</Button></Col>
+                                    <Button onClick = {handleAdd}>+</Button></Col>
                             </Row>
                             <Row className="Mealdetail">
                                 <Row>Protein: {itemPopup.price}</Row>
@@ -98,7 +112,7 @@ function MenuList(props) {
                 
             </Modal.Body>
             <Modal.Footer>
-                <Button onClick = {() => {props.handlefunc(itemPopup, itemPopup.quantity); handleClose()}}>
+                <Button onClick = {() => {props.handlefunc(itemPopup, quantity); resetQuantity(); handleClose()}}>
                     Add this meal to cart
                 </Button>
             </Modal.Footer>

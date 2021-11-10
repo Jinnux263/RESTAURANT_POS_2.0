@@ -7,7 +7,7 @@ function calSum(list) {
     0);
 }
 function MealInfo(props) {
-    //console.log(props)
+    //console.log("MenuInfo")
     return (
         <Container className="MealInfoContainer" >
             <h2 className = "header">Your cart</h2>
