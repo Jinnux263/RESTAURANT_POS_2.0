@@ -101,10 +101,10 @@ function MenuList(props) {
                                     <Button onClick = {handleAdd}>+</Button></Col>
                             </Row>
                             <Row className="Mealdetail">
-                                <Row>Protein: {itemPopup.price}</Row>
-                                <Row>Assitives: {itemPopup.price}</Row>
-                                <Row>Baking material: {itemPopup.price}</Row>
-                                <Row>Food decoration: {itemPopup.price}</Row>
+                                <Row>Protein: {itemPopup.protein}</Row>
+                                <Row>Assitives: {itemPopup.additives}</Row>
+                                <Row>Baking material: {itemPopup.material}</Row>
+                                <Row>Food decoration: {itemPopup.decor}</Row>
                             </Row>
                         </Col>
                     </Row>
