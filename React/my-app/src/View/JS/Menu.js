@@ -72,7 +72,7 @@ function Menu() {
     return (
         <div className="container mt-5 p-3 rounded cart" style={{background:"#eee",marginBottom:"5rem"}}>
             <Row>
-                <Col xs = {12} md = {12} lg = {9} className="Menucontainer" >
+                <Col xs = {12} md = {9} lg = {9} className="Menucontainer" >
                     <Row>
                         <Navbar />
                     </Row>
@@ -99,7 +99,7 @@ function Menu() {
                         <MenuList Mlist = {ShowList} handlefunc = {handleAddToCart} incfunc = {incFunc} decFunc = {decFunc}/>
                     </Row>
                 </Col>
-                <Col className="payment-info" style={{marginRight:"2rem",marginLeft:"2rem"}}> 
+                <Col className="payment-info" style={{marginRight:"1rem",marginLeft:"1rem"}}> 
                     <MealInfo CartList = {cartItems} handlefunc= {handleCancelCart} incfunc = {incFunc} decFunc = {decFunc} style/>
                 </Col>
             </Row>
