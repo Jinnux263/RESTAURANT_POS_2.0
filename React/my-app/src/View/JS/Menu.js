@@ -1,4 +1,4 @@
-import {Col, Row, Container, CloseButton, Card, CardGroup} from 'react-bootstrap';
+import {Col, Row, Container, Card, CardGroup} from 'react-bootstrap';
 import { useState } from 'react';
 import MenuList from './MenuList/MenuList';
 import MealInfo from './MenuInfo/MealInfo';
