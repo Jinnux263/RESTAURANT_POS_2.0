@@ -9,9 +9,9 @@ function calSum(list) {
 function MealInfo(props) {
     //console.log("MenuInfo")
     return (
-        <Container className="MealInfoContainer" >
+        <Container className="MealInfoContainer">
             <h2 className = "header">Your cart</h2>
-            <Row className="OrderListContainer" xs = {7}> 
+            <Row className="OrderListContainer" xs = {8}> 
                     {props.CartList.map((item, index) => <Item key = {index} input = {item} incFunc = {props.incfunc} decFunc = {props.decFunc}/>)}
             </Row>
             <Row className = "PaymentInfo">

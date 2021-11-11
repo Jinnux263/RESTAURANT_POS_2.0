@@ -97,7 +97,7 @@ function Menu() {
                         <MenuList Mlist = {ShowList} handlefunc = {handleAddToCart} incfunc = {incFunc} decFunc = {decFunc}/>
                     </Row>
                 </Col>
-                <Col> 
+                <Col style = {{backgroundColor: "white"}}> 
                     <MealInfo CartList = {cartItems} handlefunc= {handleCancelCart} incfunc = {incFunc} decFunc = {decFunc}/>
                 </Col>
             </Row>
