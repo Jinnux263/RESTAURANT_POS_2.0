@@ -10,7 +10,7 @@ function MealInfo(props) {
     //console.log("MenuInfo")
     return (
         <Container className="MealInfoContainer" >
-            <h2 className = "header" style={{marginTop:"2rem",fontSize:"2.5rem"}}>Your cart</h2>
+            <h2 className = "header" style={{marginTop:"2rem",fontSize:"3rem"}}>Your cart</h2>
             <Row className="OrderListContainer" xs = {12}> 
                     {props.CartList.map((item, index) => <Item key = {index} input = {item} incFunc = {props.incfunc} decFunc = {props.decFunc}/>)}
             </Row>
