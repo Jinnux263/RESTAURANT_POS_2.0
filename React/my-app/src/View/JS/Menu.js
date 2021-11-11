@@ -5,7 +5,7 @@ import MealInfo from './MenuInfo/MealInfo';
 import '../CSS/Menu.css'
 import { All , Meat, SeaFood, Dessert, Drink} from '../../Model/Data';
 // import { BsFillHouseDoorFill } from "react-icons/bs";
-
+import Navbar from './navbar'
 
 function Menu() {
     //console.log("App")
@@ -72,8 +72,7 @@ function Menu() {
             <Row>
                 <Col xs = {9} className="Menucontainer" >
                     <Row>
-                        <CloseButton className="GoBackBtn"/>
-                        {/* <BsFillHouseDoorFill/> */}
+                        <Navbar/>
                     </Row>
                     <Row>
                         <CardGroup>
