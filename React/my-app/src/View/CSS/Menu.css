@@ -60,6 +60,8 @@
 
 .MealInfoContainer .header{
     color: red;
+    padding-top: 20px;
+    font-size: 3em;
 }
 
 .OrderListContainer {
