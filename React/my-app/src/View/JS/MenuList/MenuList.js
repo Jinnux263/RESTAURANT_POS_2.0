@@ -69,7 +69,7 @@ function MenuList(props) {
         }
         <Modal show={show} onHide={handleClose} centered size="lg">
             <Modal.Header closeButton>
-                <Modal.Title>ADD TO CART</Modal.Title>
+                <Modal.Title>DETAIL INFORMATION</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <Container>
