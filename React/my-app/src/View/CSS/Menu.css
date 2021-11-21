@@ -60,7 +60,8 @@
 
 .MealInfoContainer .header{
     color: red;
-    padding-top: 20px;
+    padding-top: 3%;
+    padding-bottom: 3%;
     font-size: 3em;
 }
 
